@@ -1,0 +1,11 @@
+---
+version: 1
+service:
+  name: {{.ProjectName}}
+  owner: {{.BootstrappingSystem.Ownership.TeamName}}
+  description: {{.BootstrappingSystem.Description}}
+  repositories:
+    - name: {{.BootstrappingSystem.GitlabProject.PathWithNamespace}}
+      path: "/"
+      provider: gitlab
+      display_name: {{.BootstrappingSystem.GitlabProject.Name}}
